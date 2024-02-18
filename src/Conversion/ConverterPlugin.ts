@@ -116,6 +116,7 @@ export class ConverterPlugin
                         let url = response.request.href;
 
                         let page = await browser.newPage();
+                        page.setDefaultNavigationTimeout(0);
                         await page.goto(url);
                         let content = await page.content();
                         await page.close();

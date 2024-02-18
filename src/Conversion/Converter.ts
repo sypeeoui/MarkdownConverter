@@ -483,7 +483,9 @@ export class Converter
                                     {
                                         message: Resources.Resources.Get("Progress.PDF")
                                     });
-
+                                
+                                page.setDefaultNavigationTimeout(0);
+                                
                                 await page.pdf(pdfOptions);
                                 break;
                             default:
